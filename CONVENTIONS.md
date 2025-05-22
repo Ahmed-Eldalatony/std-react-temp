@@ -159,45 +159,8 @@ export default Button;
 ## 10. 🛠 Tooling
 
 * **Formatting and Linting**: Use Biome for consistent code formatting and linting.
-* **HTTP Client**: Utilize Axios for API requests, configured with best practices:
 
-  * Create a centralized Axios instance with a base URL.
   * Implement request and response interceptors for logging and error handling.
-  * Use async/await syntax for cleaner asynchronous code.
-
-Example: `shared/services/apiClient.ts`
-
-```typescript
-import axios from 'axios';
-
-const apiClient = axios.create({
-  baseURL: 'https://api.example.com',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-});
-
-apiClient.interceptors.request.use(
-  (config) => {
-    // Add authorization token or other headers here
-    return config;
-  },
-  (error) => {
-    // Handle request errors
-    return Promise.reject(error);
-  }
-);
-
-apiClient.interceptors.response.use(
-  (response) => response,
-  (error) => {
-    // Handle response errors
-    return Promise.reject(error);
-  }
-);
-
-export default apiClient;
-```
 
 ---
 

@@ -1,6 +1,3 @@
-
-
-
 # 📁 React Project Conventions
 
 ## 1. 📂 Folder Structure
@@ -163,4 +160,3 @@ export default Button;
   * Implement request and response interceptors for logging and error handling.
 
 ---
-

@@ -10,6 +10,7 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 
+// Defines links to be preloaded.  In this case, google fonts.
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
@@ -23,6 +24,7 @@ export const links: Route.LinksFunction = () => [
   },
 ];
 
+// Layout component that wraps the entire app.
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
@@ -41,15 +43,18 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
+// The main App component that renders the current route.
 export default function App() {
   return <Outlet />;
 }
 
+// ErrorBoundary component to handle errors during rendering.
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   let message = "Oops!";
   let details = "An unexpected error occurred.";
   let stack: string | undefined;
 
+  // Check if the error is a route error response.
   if (isRouteErrorResponse(error)) {
     message = error.status === 404 ? "404" : "Error";
     details =

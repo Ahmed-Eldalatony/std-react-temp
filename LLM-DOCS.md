@@ -1,4 +1,3 @@
-
 TITLE: Installing React Router via npm
 DESCRIPTION: Installs the React Router package using npm. This command adds React Router as a dependency to the project.
 SOURCE: https://github.com/remix-run/react-router/blob/main/docs/start/data/installation.md#2025-04-22_snippet_1

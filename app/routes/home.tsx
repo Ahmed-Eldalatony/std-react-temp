@@ -1,17 +1,23 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
 
-export function meta({}: Route.MetaArgs) {
+// Meta function to define metadata for the route.
+export function meta({ }: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Simple starter" }, // Updated title
+    { name: "description", content: "A simple starter for React Router" }, // Updated description
   ];
 }
 
+// Loader function to fetch data for the route.
 export function loader({ context }: Route.LoaderArgs) {
-  return { message: context.VALUE_FROM_NETLIFY };
+  return { message: context.VALUE_FROM_NETLIFY }; // Keep existing loader data if needed
 }
 
+// Home component for the default route.
 export default function Home({ loaderData }: Route.ComponentProps) {
-  return <Welcome message={loaderData.message} />;
+  return (
+    <main className="flex flex-col items-center justify-center min-h-screen bg-background text-foreground">
+      hello
+    </main>
+  );
 }

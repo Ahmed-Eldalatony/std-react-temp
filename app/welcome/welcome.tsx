@@ -1,6 +1,7 @@
 import logoDark from "./logo-dark.svg";
 import logoLight from "./logo-light.svg";
 
+// Welcome component that displays a welcome message and links to resources.
 export function Welcome({ message }: { message: string }) {
   return (
     <main className="flex items-center justify-center pt-16 pb-4">
@@ -47,6 +48,7 @@ export function Welcome({ message }: { message: string }) {
   );
 }
 
+// Array of resource links to display in the Welcome component.
 const resources = [
   {
     href: "https://reactrouter.com/docs",

@@ -8,6 +8,7 @@ Please follow these instructions strictly to ensure accuracy and avoid hallucina
 
     Follow all design and architecture conventions described in the CONVENTIONS.md file.
 
+   Install using pnpm not npm
 🔧 Usage Instructions
 
     DO NOT use the deprecated shadcn-ui CLI.
